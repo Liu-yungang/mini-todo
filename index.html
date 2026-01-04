@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>我的第一个 Git 项目</title>
+</head>
+<body>
+    <h1>待办事项清单</h1>
+    <input type="text" id="taskInput" placeholder="输入新任务...">
+    <button onclick="addTask()">添加</button>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const text = input.value;
+            if (text) {
+                const li = document.createElement('li');
+                li.textContent = text;
+                document.getElementById('taskList').appendChild(li);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
